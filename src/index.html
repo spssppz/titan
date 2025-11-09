@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+@@include('html/head.html', {
+"title":"Главная"
+})
+
+<body>
+
+	<div class="wrapper">
+		@@include('html/header.html')
+		<main class="page">
+			<section class="hero">
+				<div class="hero__container">
+					<div class="hero__left">
+						<h1 class="hero__title">Юридическая защита бизнеса на которую можно положиться.</h1>
+						<h2 class="hero__subtitle">Полный цикл услуг</h2>
+						<div class="hero__text">Глубокий анализ, стратегический подход и настойчивость в защите ваших активов и репутации.</div>
+						<div class="hero__btns">
+							<a class="hero__btn btn btn_green" href="">Оставить заявку</a>
+							<a class="hero__btn btn btn_w" href="">Задать вопрос</a>
+						</div>
+					</div>
+					<div class="hero-right">
+						<div class="hero-right__content">
+							<div class="hero-right__cap">Нам доверяют свои дела</div>
+							<div class="hero-right__num">1250+</div>
+							<div class="hero-right__descr">компаний</div>
+						</div>
+						<div class="hero-right__image">
+							<img srcset="@img/hero/1@2x.jpg 2x" src="@img/hero/1.jpg" width="787" height="744" alt="">
+						</div>
+					</div>
+				</div>
+			</section>
+			<!--  -->
+			@@include('html/sections/application.html')
+			@@include('html/sections/reviews.html')
+			<section class="advantages">
+				<div class="advantages__container">
+					<h2 class="advantages__title title">Достижения</h2>
+					<ul class="advantages__cols">
+						<li class="advantage">
+							<h3 class="advantage__cap">1489+</h3>
+							<div class="advantage__descr">
+								<p>компаний работают с нами</p>
+							</div>
+						</li>
+						<li class="advantage">
+							<h3 class="advantage__cap">15 лет</h3>
+							<div class="advantage__descr">
+								<p>На рынке</p>
+							</div>
+						</li>
+						<li class="advantage">
+							<h3 class="advantage__cap">43</h3>
+							<div class="advantage__descr">
+								<p>сотрудника</p>
+							</div>
+						</li>
+						<li class="advantage">
+							<h3 class="advantage__cap">1489+</h3>
+							<div class="advantage__descr">
+								<p>Закрыто дел</p>
+							</div>
+						</li>
+					</ul>
+				</div>
+			</section>
+			<section class="certificates">
+				<div class="certificates__container">
+					<h2 class="certificates__title title">Сертификаты</h2>
+					<div class="slider-wrapper">
+						<div class="certificates__slider swiper">
+							<div class="certificates__wrapper swiper-wrapper">
+								<div class="certificates__slide swiper-slide">
+									<img srcset="@img/certificates/1@2x.jpg 2x" src="@img/certificates/1.jpg" width="331" height="457" loading="lazy" alt="">
+								</div>
+								<div class="certificates__slide swiper-slide">
+									<img srcset="@img/certificates/2@2x.jpg 2x" src="@img/certificates/2.jpg" width="331" height="457" loading="lazy" alt="">
+								</div>
+								<div class="certificates__slide swiper-slide">
+									<img srcset="@img/certificates/3@2x.jpg 2x" src="@img/certificates/3.jpg" width="331" height="457" loading="lazy" alt="">
+								</div>
+								<div class="certificates__slide swiper-slide">
+									<img srcset="@img/certificates/4@2x.jpg 2x" src="@img/certificates/4.jpg" width="331" height="457" loading="lazy" alt="">
+								</div>
+								<div class="certificates__slide swiper-slide">
+									<img srcset="@img/certificates/1@2x.jpg 2x" src="@img/certificates/1.jpg" width="331" height="457" loading="lazy" alt="">
+								</div>
+								<div class="certificates__slide swiper-slide">
+									<img srcset="@img/certificates/2@2x.jpg 2x" src="@img/certificates/2.jpg" width="331" height="457" loading="lazy" alt="">
+								</div>
+								<div class="certificates__slide swiper-slide">
+									<img srcset="@img/certificates/3@2x.jpg 2x" src="@img/certificates/3.jpg" width="331" height="457" loading="lazy" alt="">
+								</div>
+								<div class="certificates__slide swiper-slide">
+									<img srcset="@img/certificates/4@2x.jpg 2x" src="@img/certificates/4.jpg" width="331" height="457" loading="lazy" alt="">
+								</div>
+							</div>
+						</div>
+						<div class="slider-nav">
+							<button class="slider-nav__btn certificates__slider-btn certificates__slider-btn_prev" aria-label="Предыдущий слайд">
+								<svg width="19" height="35" viewBox="0 0 19 35" fill="none" xmlns="http://www.w3.org/2000/svg">
+									<path d="M17.7071 34.5L0.70711 17.5L17.7071 0.500001" stroke-linecap="round" />
+								</svg>
+							</button>
+							<button class="slider-nav__btn certificates__slider-btn certificates__slider-btn_next" aria-label="Следующий слайд">
+								<svg width="19" height="35" viewBox="0 0 19 35" fill="none" xmlns="http://www.w3.org/2000/svg">
+									<path d="M0.5 0.5L17.5 17.5L0.5 34.5" stroke-linecap="round" />
+								</svg>
+							</button>
+						</div>
+					</div>
+				</div>
+			</section>
+			<section class="news-main">
+				<div class="news-main__container">
+					<h2 class="news-main__title title">Новости</h2>
+					<ul class="news-main__items">
+						<li class="news-item news-item_main">
+							<a class="news-item__image" href="">
+								<img srcset="@img/news/1@2x.jpg 2x" src="@img/news/1.jpg" width="790" height="300" loading="lazy" alt="">
+							</a>
+							<div class="news-item__content">
+								<h3 class="news-item__label"><a href="">Как работать с бухгалтерией онлайн и не тратить время</a></h3>
+								<div class="news-item__descr">
+									<p>Правовая компания «Титан» работает на российском рынке с 1992 года. Мы предлагаем широкий спектр юридических услуг — открытие фирмы (регистрация компаний любых форм собственности), реорганизация и ликвидация юридических лиц</p>
+								</div>
+								<time class="news-item__date" datetime="01-01-2025">Август 2025</time>
+							</div>
+						</li>
+						<li class="news-item">
+							<a class="news-item__image" href="">
+								<img srcset="@img/news/2@2x.jpg 2x" src="@img/news/2.jpg" width="249" height="150" loading="lazy" alt="">
+							</a>
+							<div class="news-item__content">
+								<h3 class="news-item__label"><a href="">Как работать с бухгалтерией онлайн и не тратить время</a></h3>
+								<time class="news-item__date" datetime="01-01-2025">Август 2025</time>
+							</div>
+						</li>
+						<li class="news-item">
+							<a class="news-item__image" href="">
+								<img srcset="@img/news/3@2x.jpg 2x" src="@img/news/3.jpg" width="249" height="150" loading="lazy" alt="">
+							</a>
+							<div class="news-item__content">
+								<h3 class="news-item__label"><a href="">Как работать с бухгалтерией онлайн и не тратить время</a></h3>
+								<time class="news-item__date" datetime="01-01-2025">Август 2025</time>
+							</div>
+						</li>
+						<li class="news-item">
+							<a class="news-item__image" href="">
+								<img srcset="@img/news/4@2x.jpg 2x" src="@img/news/4.jpg" width="249" height="150" loading="lazy" alt="">
+							</a>
+							<div class="news-item__content">
+								<h3 class="news-item__label"><a href="">Как работать с бухгалтерией онлайн и не тратить время</a></h3>
+								<time class="news-item__date" datetime="01-01-2025">Август 2025</time>
+							</div>
+						</li>
+					</ul>
+				</div>
+			</section>
+			@@include('html/sections/faq.html')
+			@@include('html/sections/contacts.html')
+		</main>
+		@@include('html/footer.html')
+	</div>
+
+	<!-- @@include('html/popup.html') -->
+	@@include('html/js.html')
+
+</body>
+
+</html>

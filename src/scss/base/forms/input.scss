@@ -1,0 +1,33 @@
+//<INPUT>
+// Снипет (HTML): inp
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+textarea {
+	-webkit-appearance: none;
+	-moz-appearance: none;
+	appearance: none;
+}
+input[type="date"] {
+	display: flex;
+	align-items: center;
+}
+.input {
+	border-radius: rem(15) !important;
+	width: 100%;
+	display: block;
+	padding: rem(0) rem(20);
+	height: rem(53);
+	background: #fff;
+	font-weight: 500;
+	font-size: rem(16);
+	&::placeholder {
+		color: #64a3b8;
+		opacity: 1; // for Firefox
+	}
+}
+textarea.input {
+	resize: none;
+	padding: rem(36) rem(20);
+	min-height: rem(156);
+}

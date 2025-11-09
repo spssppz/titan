@@ -1,0 +1,220 @@
+.header {
+	padding: rem(24) rem(0);
+	@media (max-width: $tablet) {
+		padding: rem(16) rem(0);
+	}
+	@media (max-width: $mobile) {
+		padding: rem(12) rem(0);
+	}
+	&__container {
+		max-width: rem(1714);
+	}
+	&__body {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		gap: rem(20);
+		padding: rem(20) rem(60);
+		@media (min-width: $tablet) {
+			box-shadow: rem(4) rem(4) rem(20) 0 rgba(0, 0, 0, 0.06);
+			border-radius: rem(15);
+			background: #fff;
+		}
+		@media (max-width: $pc) {
+			padding: rem(20) rem(32);
+		}
+		@media (max-width: $tablet) {
+			gap: rem(8);
+			padding: 0;
+		}
+	}
+	&__logo {
+		flex: 0 0 rem(126);
+		@media (max-width: $tablet) {
+			position: relative;
+			z-index: 3;
+		}
+		@media (max-width: $mobile) {
+			flex: 0 0 rem(113);
+		}
+		img {
+			width: 100%;
+			height: auto;
+		}
+	}
+	&__right {
+		display: flex;
+		align-items: center;
+		gap: rem(24);
+		@media (max-width: $pc) {
+			gap: rem(20);
+		}
+		@media (max-width: $mobile) {
+			gap: rem(16);
+		}
+	}
+	&__phone {
+		font-weight: 300;
+		font-size: rem(24);
+		line-height: 1.3;
+		color: #143c61;
+		transition: color 0.3s;
+		white-space: nowrap;
+		@media (max-width: $pc) {
+			font-size: rem(20);
+		}
+		@media (max-width: $mobile) {
+			font-size: rem(18);
+		}
+		@media (any-hover: hover) {
+			&:hover {
+				color: #202024;
+			}
+		}
+	}
+	&__whatsapp {
+		flex: 0 0 rem(40);
+		width: rem(40);
+		height: rem(40);
+		background: url("@img/icons/whatsapp.svg") 50% / 100% no-repeat;
+		transition: transform 0.35s;
+		will-change: transform;
+		@media (max-width: $mobile) {
+			flex: 0 0 rem(36);
+			width: rem(36);
+			height: rem(36);
+		}
+		@media (max-width: $mobileSmall) {
+			display: none;
+		}
+		@media (any-hover: hover) {
+			&:hover {
+				transform: scale(1.02);
+			}
+		}
+	}
+	&__btn {
+		@media (max-width: $pc) {
+			display: none;
+		}
+	}
+}
+.menu {
+	&__body {
+		@media (max-width: $tablet) {
+			position: fixed;
+			top: 0;
+			right: -100%;
+			width: 100%;
+			height: 100%;
+			z-index: 2;
+			overflow-y: auto;
+			transition: right 0.3s;
+			background: #f4f4f4;
+			padding: rem(80) rem(0);
+		}
+		@media (max-width: $mobile) {
+			padding: rem(65) rem(0);
+		}
+		.menu-open & {
+			@media (max-width: $tablet) {
+				right: 0;
+			}
+		}
+	}
+	&__list {
+		display: flex;
+		align-items: center;
+		flex-wrap: wrap;
+		gap: rem(6) rem(50);
+		@media (max-width: $pc) {
+			gap: rem(6) rem(24);
+		}
+		@media (max-width: $tablet) {
+			flex-direction: column;
+			gap: rem(8);
+		}
+	}
+	&__item {
+		color: #595959;
+		&_current {
+			display: inline-flex;
+			align-items: center;
+			gap: rem(5);
+			color: #202024;
+			&::before {
+				content: "";
+				flex: 0 0 rem(10);
+				width: rem(10);
+				height: rem(10);
+				border-radius: 50%;
+				background: linear-gradient(132.52deg, #cdf87f 13.86%, #b5bbf9 84.85%);
+			}
+		}
+	}
+	&__link {
+		line-height: 1.5;
+		transition: color 0.3s;
+		@media (max-width: $tablet) {
+			font-size: rem(22);
+		}
+		@media (max-width: $mobileSmall) {
+			font-size: rem(20);
+		}
+		@media (any-hover: hover) {
+			&:hover {
+				color: #202024;
+			}
+		}
+	}
+}
+
+//====================================================================================================
+
+.icon-menu {
+	display: none;
+	@media (max-width: $tablet) {
+		display: block;
+		position: relative;
+		width: rem(30);
+		height: rem(18);
+		cursor: pointer;
+		z-index: 5;
+		span,
+		&::before,
+		&::after {
+			content: "";
+			transition: all 0.3s ease 0s;
+			right: 0;
+			position: absolute;
+			width: 100%;
+			height: rem(2);
+			background-color: $mainColor;
+		}
+		&::before {
+			top: 0;
+		}
+		&::after {
+			bottom: 0;
+		}
+		span {
+			top: calc(50% - rem(1));
+		}
+		.menu-open & {
+			span {
+				width: 0;
+			}
+			&::before,
+			&::after {
+			}
+			&::before {
+				top: calc(50% - rem(1));
+				transform: rotate(-45deg);
+			}
+			&::after {
+				bottom: calc(50% - rem(1));
+				transform: rotate(45deg);
+			}
+		}
+	}
+}

@@ -1,0 +1,92 @@
+.contacts {
+	overflow: hidden;
+	padding: rem(80) rem(0);
+	@media (max-width: $tablet) {
+		padding: rem(40) rem(0);
+	}
+	@media (max-width: $mobile) {
+		padding: rem(30) rem(0);
+	}
+	&:first-child {
+		padding: rem(160) rem(0) rem(80);
+		@media (max-width: $tablet) {
+			padding: rem(80) rem(0) rem(40);
+		}
+		@media (max-width: $mobile) {
+			padding: rem(60) rem(0) rem(30);
+		}
+	}
+	&:last-child {
+		padding: rem(80) rem(0) rem(160);
+		@media (max-width: $tablet) {
+			padding: rem(40) rem(0) rem(80);
+		}
+		@media (max-width: $mobile) {
+			padding: rem(30) rem(0) rem(60);
+		}
+	}
+	&__container {
+	}
+	&__title {
+	}
+	&__cols {
+		display: grid;
+		gap: rem(18);
+		@media (min-width: $pc) {
+			grid-template-columns: 1fr 1fr;
+		}
+	}
+}
+
+.contacts-col {
+	&__header {
+		display: flex;
+		align-items: center;
+		gap: rem(20);
+		@media (min-width: $tablet) {
+			max-width: 90%;
+		}
+		@media (max-width: $mobile) {
+			gap: rem(16);
+		}
+		&:not(:last-child) {
+			margin-bottom: rem(25);
+		}
+	}
+	&__icon {
+		flex: 0 0 rem(48);
+		width: rem(48);
+		height: rem(48);
+		background: url("@img/icons/map-connection.svg") 50% / 100% no-repeat;
+		@media (max-width: $mobile) {
+			flex: 0 0 rem(40);
+			width: rem(40);
+			height: rem(40);
+		}
+	}
+	&__address {
+		font-weight: 300;
+		font-size: rem(24);
+		text-decoration: underline;
+		text-decoration-skip-ink: none;
+		line-height: math.div(30, 24);
+		@media (max-width: $tablet) {
+			font-size: rem(22);
+		}
+		@media (max-width: $mobile) {
+			font-size: rem(20);
+		}
+	}
+	&__map {
+		border-radius: rem(15);
+		overflow: hidden;
+		background-color: #fff;
+		aspect-ratio: 1/1;
+		@media (max-width: $pc) {
+			aspect-ratio: 5/4;
+		}
+		@media (max-width: $mobileSmall) {
+			aspect-ratio: 1/1;
+		}
+	}
+}

@@ -1,0 +1,190 @@
+.faq {
+	padding: rem(80) rem(0);
+	@media (max-width: $tablet) {
+		padding: rem(40) rem(0);
+	}
+	@media (max-width: $mobile) {
+		padding: rem(30) rem(0);
+	}
+	&:first-child {
+		padding: rem(160) rem(0) rem(80);
+		@media (max-width: $tablet) {
+			padding: rem(80) rem(0) rem(40);
+		}
+		@media (max-width: $mobile) {
+			padding: rem(60) rem(0) rem(30);
+		}
+	}
+	&:last-child {
+		padding: rem(80) rem(0) rem(160);
+		@media (max-width: $tablet) {
+			padding: rem(40) rem(0) rem(80);
+		}
+		@media (max-width: $mobile) {
+			padding: rem(30) rem(0) rem(60);
+		}
+	}
+	&__container {
+	}
+	&__title {
+	}
+	&__body {
+		display: grid;
+		gap: rem(20);
+		@media (min-width: $tablet) {
+			align-items: start;
+			grid-template-columns: 1fr rem(516);
+		}
+	}
+	&__spollers {
+	}
+}
+
+.spoller {
+	background: #fff;
+	border: rem(2) solid #e5e9ec;
+	border-radius: rem(15);
+	overflow: hidden;
+	&:not(:last-child) {
+		margin-bottom: rem(20);
+		@media (max-width: $mobile) {
+			margin-bottom: rem(16);
+		}
+	}
+	&__label {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		text-align: left;
+		gap: rem(12);
+		font-size: rem(24);
+		line-height: 1.2;
+		color: #202024;
+		padding: rem(25) rem(20);
+		width: 100%;
+		@media (max-width: $tablet) {
+			padding: rem(20) rem(16);
+			font-size: rem(22);
+		}
+		@media (max-width: $mobile) {
+			padding: rem(16) rem(12);
+			font-size: rem(20);
+		}
+		span {
+			flex: 0 0 rem(23);
+			width: rem(23);
+			height: rem(23);
+			position: relative;
+			transition: transform 0.3s;
+			will-change: transform;
+			&::before,
+			&::after {
+				content: "";
+				position: absolute;
+				top: 50%;
+				left: 50%;
+				transform: translate(-50%, -50%);
+				width: 100%;
+				height: rem(2);
+				background: #202024;
+			}
+			&::after {
+				transform: translate(-50%, -50%) rotate(90deg);
+			}
+		}
+		&._spoller-active {
+			span {
+				transform: rotate(45deg);
+			}
+		}
+	}
+	&__body {
+		padding: rem(0) rem(20) rem(25);
+		line-height: 1.25;
+		@media (max-width: $tablet) {
+			padding: rem(0) rem(16) rem(20);
+		}
+		@media (max-width: $mobile) {
+			padding: rem(0) rem(12) rem(16);
+			font-size: rem(16);
+		}
+	}
+}
+
+.faq-callback {
+	background: #143c61;
+	border-radius: rem(15);
+	padding: rem(40);
+	@media (max-width: $tablet) {
+		padding: rem(32);
+	}
+	@media (max-width: $mobile) {
+		padding: rem(24);
+	}
+	&__label {
+		font-weight: 700;
+		font-size: rem(40);
+		line-height: 1.5;
+		letter-spacing: 0.02em;
+		color: #fff;
+		@media (max-width: $tablet) {
+			font-size: rem(36);
+		}
+		@media (max-width: $mobile) {
+			font-size: rem(32);
+		}
+		@media (max-width: $mobileSmall) {
+			font-size: rem(28);
+		}
+		&:not(:last-child) {
+			margin-bottom: rem(10);
+		}
+	}
+	&__descr {
+		font-weight: 300;
+		font-size: rem(36);
+		letter-spacing: 0.02em;
+		color: #d6f85b;
+		font-style: italic;
+		@media (max-width: $tablet) {
+			font-size: rem(32);
+		}
+		@media (max-width: $mobile) {
+			font-size: rem(28);
+		}
+		@media (max-width: $mobileSmall) {
+			font-size: rem(24);
+		}
+		&:not(:last-child) {
+			margin-bottom: rem(85);
+			@media (max-width: $tablet) {
+				margin-bottom: rem(60);
+			}
+			@media (max-width: $mobile) {
+				margin-bottom: rem(40);
+			}
+		}
+	}
+	&__form {
+	}
+	&__input {
+		&:not(:last-child) {
+			margin-bottom: rem(10);
+		}
+	}
+	&__btn {
+		width: 100%;
+		@media (any-hover: hover) {
+			&:hover {
+				color: #143c61;
+				background: #d6f85b;
+				opacity: 0.7;
+			}
+		}
+		&:not(:last-child) {
+			margin-bottom: rem(20);
+		}
+	}
+	&__checkbox {
+	}
+}
