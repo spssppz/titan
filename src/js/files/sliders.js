@@ -1,13 +1,25 @@
 /* Документация слайдера: https://swiperjs.com/ */
 
 import Swiper from 'swiper';
-import { Navigation } from 'swiper/modules';
+import { Navigation, Pagination } from 'swiper/modules';
 /*
 Основниые модули слайдера:
 Navigation, Pagination, Autoplay, EffectFade, Lazy, Manipulation
 */
 
 function initSliders() {
+	if (document.querySelector('.tariffs__slider')) {
+		new Swiper('.tariffs__slider', {
+			modules: [Pagination],
+			spaceBetween: 20,
+			slidesPerView: 1,
+			speed: 800,
+			pagination: {
+				el: '.tariffs__pagination',
+				clickable: true,
+			}
+		})
+	}
 	if (document.querySelector('.reviews__slider')) {
 		new Swiper('.reviews__slider', {
 			modules: [Navigation],

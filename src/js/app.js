@@ -26,7 +26,7 @@ flsFunctions.spollers();
 // import './files/lazyload.js'
 
 /* Модуль работы с табами */
-// flsFunctions.tabs();
+flsFunctions.tabs();
 
 /* Модуль "показать еще" */
 // flsFunctions.showMore();

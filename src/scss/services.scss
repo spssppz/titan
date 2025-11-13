@@ -1,0 +1,68 @@
+.services {
+	&__container {
+	}
+	&__cols {
+		columns: 3;
+		gap: rem(30);
+		@media (max-width: $pc) {
+			columns: 2;
+			gap: rem(20);
+		}
+		@media (max-width: $mobile) {
+			columns: 1;
+		}
+	}
+}
+.services-col {
+	break-inside: avoid;
+	border-radius: rem(15);
+	padding: rem(20) rem(40);
+	background: #f3f6ff;
+	display: block;
+	margin-bottom: rem(30);
+	@media (max-width: $tablet) {
+		padding: rem(16) rem(32);
+		margin-bottom: rem(20);
+	}
+	@media (max-width: $mobile) {
+		padding: rem(16) rem(24);
+		margin-bottom: rem(16);
+	}
+	@media (max-width: $mobileSmall) {
+		padding: rem(16) rem(20);
+	}
+	&__cap {
+		font-weight: 700;
+		font-size: rem(32);
+		line-height: 1.1;
+		letter-spacing: 0.02em;
+		@media (max-width: $tablet) {
+			font-size: rem(28);
+		}
+		@media (max-width: $mobile) {
+			font-size: rem(24);
+		}
+		&:not(:last-child) {
+			margin-bottom: rem(20);
+			@media (max-width: $mobile) {
+				margin-bottom: rem(16);
+			}
+		}
+	}
+	&__list {
+	}
+	&__item {
+		a {
+			text-decoration: underline;
+			text-decoration-skip-ink: none;
+			color: #30484c;
+			font-weight: 300;
+			line-height: 2;
+			@media (any-hover: hover) {
+				&:hover {
+					text-decoration: none;
+				}
+			}
+		}
+	}
+}
