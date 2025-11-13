@@ -84,6 +84,9 @@ body {
 // Подключение стилей отдельных страниц
 @import "home"; // Главная
 @import "services"; // Услуги
+@import "category"; // Категория услуги
+//
+@import "contacts"; // Контакты
 
 .links {
 	padding: rem(50) rem(0);
