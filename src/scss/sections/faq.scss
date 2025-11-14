@@ -115,11 +115,21 @@
 	background: #143c61;
 	border-radius: rem(15);
 	padding: rem(40);
+	display: grid;
+	gap: rem(85);
 	@media (max-width: $tablet) {
 		padding: rem(32);
+		gap: rem(60);
 	}
 	@media (max-width: $mobile) {
 		padding: rem(24);
+		gap: rem(40);
+	}
+	.cat-item & {
+		@media (min-width: $tablet) {
+			grid-template-columns: 1fr 1fr;
+			gap: rem(20);
+		}
 	}
 	&__label {
 		font-weight: 700;
@@ -154,15 +164,6 @@
 		}
 		@media (max-width: $mobileSmall) {
 			font-size: rem(24);
-		}
-		&:not(:last-child) {
-			margin-bottom: rem(85);
-			@media (max-width: $tablet) {
-				margin-bottom: rem(60);
-			}
-			@media (max-width: $mobile) {
-				margin-bottom: rem(40);
-			}
 		}
 	}
 	&__form {

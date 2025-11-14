@@ -681,6 +681,15 @@
 			padding: rem(30) rem(0) rem(60);
 		}
 	}
+	+ section.other-news {
+		padding: 0 rem(0) rem(80);
+		@media (max-width: $tablet) {
+			padding: 0 rem(0) rem(40);
+		}
+		@media (max-width: $mobile) {
+			padding: 0 rem(0) rem(30);
+		}
+	}
 	&__container {
 	}
 	&__title {

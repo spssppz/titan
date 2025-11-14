@@ -83,6 +83,29 @@
 .application-form {
 	display: flex;
 	flex-direction: column;
+	&__title {
+		font-weight: 600;
+		line-height: 1.2;
+		font-size: rem(42);
+		@media (max-width: $tablet) {
+			font-size: rem(36);
+		}
+		@media (max-width: $mobile) {
+			font-size: rem(30);
+		}
+		@media (max-width: $mobileSmall) {
+			font-size: rem(26);
+		}
+		&:not(:last-child) {
+			margin-bottom: rem(24);
+			@media (max-width: $tablet) {
+				margin-bottom: rem(20);
+			}
+			@media (max-width: $mobile) {
+				margin-bottom: rem(16);
+			}
+		}
+	}
 	&__inputs {
 		&:not(:last-child) {
 			margin-bottom: rem(16);

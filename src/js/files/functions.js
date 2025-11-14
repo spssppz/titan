@@ -184,7 +184,7 @@ export let bodyLockToggle = (delay = 500) =>
 
 /* Спойлеры
 [data-spollers] для родителя
-[data-spoller] для заголовков
+[hidden] для заголовков
 Спойлеры с медиа-запросами: [data-spollers="992,max"], [data-spollers="768,min"]
 [data-spollers-speed] скорость открытия
 Если нужен аккордион [data-one-spoller] для родителя

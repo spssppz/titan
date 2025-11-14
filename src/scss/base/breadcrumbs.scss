@@ -21,6 +21,8 @@
 	ul {
 		display: flex;
 		align-items: center;
+		flex-wrap: wrap;
+		row-gap: rem(8);
 		li {
 			font-family: $second-family;
 			font-size: rem(12);
@@ -31,6 +33,9 @@
 				&::after {
 					content: ">>";
 					margin: rem(0) rem(12);
+					@media (max-width: $mobile) {
+						margin: rem(0) rem(8);
+					}
 				}
 			}
 			a {

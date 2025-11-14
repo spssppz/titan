@@ -1,3 +1,82 @@
+.contacts-page {
+	padding-bottom: rem(60);
+	@media (max-width: $tablet) {
+		padding-bottom: rem(40);
+	}
+	@media (max-width: $mobile) {
+		padding-bottom: rem(30);
+	}
+	&__container {
+		display: grid;
+		gap: rem(20);
+		@media (min-width: $tablet) {
+			grid-template-columns: 1fr 1fr;
+		}
+	}
+	&__left {
+	}
+	&__title {
+		font-size: rem(42);
+		@media (max-width: $tablet) {
+			font-size: rem(36);
+		}
+		@media (max-width: $mobile) {
+			font-size: rem(30);
+		}
+		@media (max-width: $mobileSmall) {
+			font-size: rem(26);
+		}
+		&:not(:last-child) {
+			margin-bottom: rem(24);
+			@media (max-width: $tablet) {
+				margin-bottom: rem(20);
+			}
+			@media (max-width: $mobile) {
+				margin-bottom: rem(16);
+			}
+		}
+	}
+	&__descr {
+		font-weight: 600;
+		font-size: rem(24);
+		text-decoration: underline;
+		text-decoration-skip-ink: none;
+		font-weight: 300;
+		line-height: math.div(30, 24);
+		@media (max-width: $tablet) {
+			font-size: rem(22);
+		}
+		@media (max-width: $mobile) {
+			font-size: rem(20);
+		}
+		span {
+			font-weight: 600;
+		}
+		p {
+			&:not(:last-child) {
+				margin-bottom: rem(28);
+				@media (max-width: $tablet) {
+					margin-bottom: rem(24);
+				}
+				@media (max-width: $mobile) {
+					margin-bottom: rem(16);
+				}
+			}
+		}
+		&:not(:last-child) {
+			margin-bottom: rem(54);
+			@media (max-width: $tablet) {
+				margin-bottom: rem(40);
+			}
+			@media (max-width: $mobile) {
+				margin-bottom: rem(24);
+			}
+		}
+	}
+	&__right {
+	}
+}
+
 //========================================================================================================================================================
 
 .offices {
@@ -35,8 +114,13 @@
 
 .office {
 	display: grid;
-	grid-template-columns: 1fr percent(787, 1582);
 	gap: rem(38);
+	@media (min-width: $tablet) {
+		grid-template-columns: 1fr percent(787, 1582);
+	}
+	@media (max-width: $pc) {
+		gap: rem(20);
+	}
 	&:not(:last-child) {
 		border-bottom: rem(1) solid #143c61;
 		margin-bottom: rem(40);
@@ -63,6 +147,14 @@
 	display: flex;
 	align-items: center;
 	gap: rem(20);
+	@media (max-width: $mobile) {
+		gap: rem(16);
+	}
+	@media (max-width: $mobileSmall) {
+		gap: rem(12);
+		flex-direction: column;
+		align-items: flex-start;
+	}
 	&:not(:last-child) {
 		margin-bottom: rem(40);
 		@media (max-width: $tablet) {
@@ -76,6 +168,16 @@
 		flex: 0 0 rem(48);
 		width: rem(48);
 		height: rem(48);
+		@media (max-width: $tablet) {
+			flex: 0 0 rem(42);
+			width: rem(42);
+			height: rem(42);
+		}
+		@media (max-width: $mobile) {
+			flex: 0 0 rem(38);
+			width: rem(38);
+			height: rem(38);
+		}
 		img {
 			width: 100%;
 			height: auto;
@@ -103,6 +205,9 @@
 		address {
 			&:not(:last-child) {
 				margin-bottom: rem(20);
+				@media (max-width: $mobile) {
+					margin-bottom: rem(16);
+				}
 			}
 		}
 		a {
